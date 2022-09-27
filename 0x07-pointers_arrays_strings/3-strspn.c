@@ -3,7 +3,7 @@
 /**
  * _strspn - Locates a character in a string
  * @s: This is the main C string to be scanned.
- * @accept: This is the string containing the list of characters to match in s
+ * @accept: This is the string containing the list of characters 
  * Return: return count
  **/
 
@@ -29,11 +29,6 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 
-			if (s[i] != accept[j]) /*If aren't equals*/
-			{
-				break;
-			}
-
 			j++;    /*add j+1*/
 		}
 
@@ -42,9 +37,8 @@ unsigned int _strspn(char *s, char *accept)
 			break;
 		}
 
-			i++; /*add x+1*/
-
+		i++; /*add x+1*/
 	}
 
 	return (count); /*return the value of count*/
-}	
+}
