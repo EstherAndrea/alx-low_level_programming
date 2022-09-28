@@ -8,18 +8,18 @@
 /**
  * _strlen_recursion - Returns the length of a string.
  * @s: The string to be used
- *
- 
+ * 
  * Return: The length of the string.
  */
 int _strlen_recursion(char *s)
 {
-	int sum = o;
+	int len = 0;
 
-	if (*s != '\0')
+	if (*s)
 	{
-		 sum++;
-		 sum += _strlen_recursion(s + 1);
+		 len++;
+		 len += _strlen_recursion(s + 1);
 	}
+
 	return (len);
 }
