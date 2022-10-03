@@ -6,21 +6,34 @@
  *Return: pointer
  */
 
-char *create_array(unassigned int size, char c)
+char *create_array(unsigned int size, char c)
 {
-	char *array;
+char *buffer;
+unsigned int position;
 
-	unassigned int index;
+if (size == 0)
+{
+return (NULL);
+}
 
-	if (size == 0)
-		return (NULL);
-	array = malloc(sizeof(char) * size);
+/*Define values with malloc*/
+buffer = (char *) malloc(size * sizeof(c));
 
-	if (array == NULL)
-		return (NULL);
+if (buffer == 0)
+{
+return (NULL);
+}
 
-	for (index = 0; index < size; index++)
-		array[index] = c;
+else
+{
+position = 0;
+while (position < size) /*While for array*/
+{
+*(buffer + position) = c;
+position++;
+}
 
-	return (array);
+return (buffer);
+}
+
 }
