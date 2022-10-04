@@ -30,6 +30,7 @@ char *str_concat(char *s1, char *s2)
 	char *dst;
 	unsigned int i, j, size;
 
+
 	/*If the array is empty*/
 	if (s1 == NULL)
 		s1 = "";
@@ -53,7 +54,7 @@ char *str_concat(char *s1, char *s2)
 		*(dst + i) = *(s1 + i);
 
 	for (j = 0; *(s2 + j) != '\0'; j++)
-	[
+	{
 		*(dst + i) = *(s2 + j);
 		i++;
 	}
